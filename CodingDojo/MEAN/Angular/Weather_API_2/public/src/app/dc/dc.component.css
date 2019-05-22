@@ -1,0 +1,13 @@
+ul, li {
+    list-style-type: none;
+}
+
+ul {
+    display: inline-block;
+    width: 48%;
+}
+
+img {
+    display: inline-block;
+    width: 48%;
+}

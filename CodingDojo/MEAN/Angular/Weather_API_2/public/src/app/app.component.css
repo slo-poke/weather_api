@@ -1,0 +1,11 @@
+ul {
+    display: block;
+}
+li {
+    list-style-type: none;
+    display: inline;
+}
+.nav {
+    text-align: center;
+    margin: 0px auto;
+}
