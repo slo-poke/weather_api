@@ -1,0 +1,30 @@
+<div class="pokeInfo" *ngIf="!onLoad">
+    <ul>
+      <li><a (click)="getRegion(1)">Kanto</a></li>
+      <li><a (click)="getRegion(2)">Johto</a></li>
+      <li><a (click)="getRegion(3)">Hoenn</a></li>
+      <li><a (click)="getRegion(4)">Sinnoh</a></li>
+      <li><a (click)="getRegion(5)">Unova</a></li>
+      <li><a (click)="getRegion(6)">Kalos</a></li>
+      <li><a (click)="getRegion(7)">Alola</a></li>
+      <!-- <li><img src="../assets/images/Kanto.png" alt="Kanto Region Button" class="regionBtn" /></li>
+      <li><img src="../assets/images/Johto.png" alt="Johto Region Button" class="regionBtn" /></li>
+      <li><img src="../assets/images/Hoenn.png" alt="Hoenn Region Button" class="regionBtn" /></li>
+      <li><img src="../assets/images/Sinnoh.png" alt="Sinnoh Region Button" class="regionBtn" /></li>
+      <li><img src="../assets/images/Unova.png" alt="Unova Region Button" class="regionBtn" /></li>
+      <li><img src="../assets/images/Kalos.png" alt="Kalos Region Button" class="regionBtn" /></li>
+      <li><img src="../assets/images/Alola.png" alt="Alola Region Button" class="regionBtn" /></li> -->
+    </ul>
+
+    <mat-chip-list class="mat-chip-list-stacked" aria-label="Color selection">
+      <mat-chip *ngFor="let chip of availableColors" selected [color]="chip.color">
+        {{chip.name}}
+      </mat-chip>
+    </mat-chip-list>
+      
+
+    <div class="flex-container">
+      <!-- <li *ngFor="let poke of pokeNames">{{ poke.name }}</li> -->
+      <div class="flex-box" *ngFor="let poke of Pokemon"><img [src]="poke.sprites.front_default" /></div>
+    </div>
+  </div>
